@@ -16,6 +16,10 @@
     border: 1px solid $orangeColor;
     color: $textColor;
     margin-right: 15px;
+
+    &:hover {
+        color: $textColor;
+    }
 }
 
 .btn-ghost {

@@ -1,0 +1,22 @@
+.section-plans {
+    background: #f4f4f4;
+
+    .plan-box {
+        width: 90%;
+        background-color: #fff;
+        border-radius: 5px;
+
+        div {
+            padding: 20px;
+            border-bottom: 1px solid #e8e8e8;
+
+            &:first-of-type {
+                background: #fcfcfc;
+            }
+
+            &:last-of-type {
+                background: #fcfcfc;
+            }
+        }
+    }
+}

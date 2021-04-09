@@ -14,3 +14,14 @@
 // components
 @import 'components/buttons';
 @import 'components/container';
+
+// vendors
+@import 'vendors/grid';
+
+// Home
+@import 'modules/home-page/features';
+@import 'modules/home-page/meals-showcase';
+@import 'modules/home-page/steps';
+@import 'modules/home-page/cities';
+@import 'modules/home-page/testimonials';
+@import 'modules/home-page/plans';

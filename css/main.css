@@ -378,150 +378,103 @@ textarea {
   box-sizing: border-box;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-  outline: none;
-  word-break: break-word;
-  -webkit-text-decoration-skip: ink;
-}
-
-a:hover {
-  text-decoration: none;
-  outline: none;
-}
-
-a:focus {
-  outline: none;
-}
-
+html,
 body {
+  background-color: #fff;
+  color: #555;
   font-family: "Lato", "Arial", sans-serif;
+  font-weight: 300;
   font-size: 20px;
+  text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
 
-html {
-  overflow-x: hidden;
+/* ICONS */
+.icon-big {
+  font-size: 350%;
+  display: block;
+  color: #e67e22;
+  margin-bottom: 10px;
+}
+
+.icon-small {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  color: #e67e22;
+  font-size: 120%;
+  margin-right: 10px;
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -5px;
+}
+
+/* PARAGRAPHS */
+p {
+  font-weight: 300;
+}
+
+.box p {
+  font-size: 90%;
+  line-height: 145%;
+}
+
+.long-copy {
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
+}
+
+/* ----- HEADINGS ----- */
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 h1 {
-  font-size: 48px;
-  line-height: 1.2;
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  word-spacing: 3px;
+  margin-top: 0;
   margin-bottom: 20px;
+  color: #fff;
+  font-size: 240%;
+  word-spacing: 4px;
+  letter-spacing: 1px;
 }
 
 h2 {
-  font-size: 42px;
-  line-height: 1.2;
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+h2:after {
+  display: block;
+  height: 2px;
+  background-color: #e67e22;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
 }
 
 h3 {
-  font-size: 36px;
-  line-height: 1.2;
+  font-size: 110%;
+  margin-bottom: 15px;
 }
 
-h4 {
-  font-size: 32px;
-  line-height: 1.2;
-}
-
-h5 {
-  font-size: 28px;
-  line-height: 1.2;
-}
-
-h6 {
-  font-size: 24px;
-  line-height: 1.2;
-}
-
-b {
-  font-weight: 700;
-}
-
-sup {
-  top: -1em;
-  font-size: 0.45em;
-}
-
-strong {
-  font-weight: 700;
-}
-
-i {
-  font-style: italic;
-}
-
-@media screen and (max-width: 991px) {
-  h1 {
-    font-size: 42px;
-  }
-  h2 {
-    font-size: 36px;
-  }
-  h3 {
-    font-size: 32px;
-  }
-  h4 {
-    font-size: 28px;
-  }
-  h5 {
-    font-size: 24px;
-  }
-  h6 {
-    font-size: 20px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  h1 {
-    font-size: 36px;
-  }
-  h2 {
-    font-size: 32px;
-  }
-  h3 {
-    font-size: 28px;
-  }
-  h4 {
-    font-size: 24px;
-  }
-  h5 {
-    font-size: 20px;
-  }
-  h6 {
-    font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 575px) {
-  h1 {
-    font-size: 32px;
-  }
-  h2 {
-    font-size: 28px;
-  }
-  h3 {
-    font-size: 24px;
-  }
-  h4 {
-    font-size: 20px;
-  }
-  h5 {
-    font-size: 16px;
-  }
-  h6 {
-    font-size: 12px;
-  }
+/*LINKS */
+a {
+  text-decoration: none;
 }
 
 header {
@@ -531,6 +484,7 @@ header {
   height: 100vh;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
 header .hero-text-box {
@@ -593,6 +547,10 @@ header .main-nav li a:hover {
   margin-right: 15px;
 }
 
+.btn-full:hover {
+  color: #fff;
+}
+
 .btn-ghost {
   background-color: transparent;
   border: 1px solid #e67e22;
@@ -603,8 +561,827 @@ header .main-nav li a:hover {
   color: #fff;
 }
 
-.container {
+.row {
   max-width: 1140px;
   margin: 0 auto;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.box {
+  padding: 1%;
+}
+
+/*  SECTIONS  ============================================================================= */
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*  GROUPING  ============================================================================= */
+.row {
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */
+}
+
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+}
+
+.row:after {
+  clear: both;
+}
+
+/*  GRID COLUMN SETUP   ==================================================================== */
+.col {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child {
+  margin-left: 0;
+}
+
+/* all browsers except IE6 and lower */
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .col {
+    /*margin: 1% 0 1% 0%;*/
+    margin: 0;
+  }
+}
+
+/*  GRID OF TWO   ============================================================================= */
+.span-2-of-2 {
+  width: 100%;
+}
+
+.span-1-of-2 {
+  width: 49.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .span-2-of-2 {
+    width: 100%;
+  }
+  .span-1-of-2 {
+    width: 100%;
+  }
+}
+
+/*  GRID OF THREE   ============================================================================= */
+.span-3-of-3 {
+  width: 100%;
+}
+
+.span-2-of-3 {
+  width: 66.13%;
+}
+
+.span-1-of-3 {
+  width: 32.26%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .span-3-of-3 {
+    width: 100%;
+  }
+  .span-2-of-3 {
+    width: 100%;
+  }
+  .span-1-of-3 {
+    width: 100%;
+  }
+}
+
+/*  GRID OF FOUR   ============================================================================= */
+.span-4-of-4 {
+  width: 100%;
+}
+
+.span-3-of-4 {
+  width: 74.6%;
+}
+
+.span-2-of-4 {
+  width: 49.2%;
+}
+
+.span-1-of-4 {
+  width: 23.8%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .span-4-of-4 {
+    width: 100%;
+  }
+  .span-3-of-4 {
+    width: 100%;
+  }
+  .span-2-of-4 {
+    width: 100%;
+  }
+  .span-1-of-4 {
+    width: 100%;
+  }
+}
+
+/*  GRID OF FIVE   ============================================================================= */
+.span-5-of-5 {
+  width: 100%;
+}
+
+.span-4-of-5 {
+  width: 79.68%;
+}
+
+.span-3-of-5 {
+  width: 59.36%;
+}
+
+.span-2-of-5 {
+  width: 39.04%;
+}
+
+.span-1-of-5 {
+  width: 18.72%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .span-5-of-5 {
+    width: 100%;
+  }
+  .span-4-of-5 {
+    width: 100%;
+  }
+  .span-3-of-5 {
+    width: 100%;
+  }
+  .span-2-of-5 {
+    width: 100%;
+  }
+  .span-1-of-5 {
+    width: 100%;
+  }
+}
+
+/*  GRID OF SIX   ============================================================================= */
+.span-6-of-6 {
+  width: 100%;
+}
+
+.span-5-of-6 {
+  width: 83.06%;
+}
+
+.span-4-of-6 {
+  width: 66.13%;
+}
+
+.span-3-of-6 {
+  width: 49.2%;
+}
+
+.span-2-of-6 {
+  width: 32.26%;
+}
+
+.span-1-of-6 {
+  width: 15.33%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .span-6-of-6 {
+    width: 100%;
+  }
+  .span-5-of-6 {
+    width: 100%;
+  }
+  .span-4-of-6 {
+    width: 100%;
+  }
+  .span-3-of-6 {
+    width: 100%;
+  }
+  .span-2-of-6 {
+    width: 100%;
+  }
+  .span-1-of-6 {
+    width: 100%;
+  }
+}
+
+/*  GRID OF SEVEN   ============================================================================= */
+.span-7-of-7 {
+  width: 100%;
+}
+
+.span-6-of-7 {
+  width: 85.48%;
+}
+
+.span-5-of-7 {
+  width: 70.97%;
+}
+
+.span-4-of-7 {
+  width: 56.45%;
+}
+
+.span-3-of-7 {
+  width: 41.94%;
+}
+
+.span-2-of-7 {
+  width: 27.42%;
+}
+
+.span-1-of-7 {
+  width: 12.91%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .span-7-of-7 {
+    width: 100%;
+  }
+  .span-6-of-7 {
+    width: 100%;
+  }
+  .span-5-of-7 {
+    width: 100%;
+  }
+  .span-4-of-7 {
+    width: 100%;
+  }
+  .span-3-of-7 {
+    width: 100%;
+  }
+  .span-2-of-7 {
+    width: 100%;
+  }
+  .span-1-of-7 {
+    width: 100%;
+  }
+}
+
+/*  GRID OF EIGHT   ============================================================================= */
+.span-8-of-8 {
+  width: 100%;
+}
+
+.span-7-of-8 {
+  width: 87.3%;
+}
+
+.span-6-of-8 {
+  width: 74.6%;
+}
+
+.span-5-of-8 {
+  width: 61.9%;
+}
+
+.span-4-of-8 {
+  width: 49.2%;
+}
+
+.span-3-of-8 {
+  width: 36.5%;
+}
+
+.span-2-of-8 {
+  width: 23.8%;
+}
+
+.span-1-of-8 {
+  width: 11.1%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .span-8-of-8 {
+    width: 100%;
+  }
+  .span-7-of-8 {
+    width: 100%;
+  }
+  .span-6-of-8 {
+    width: 100%;
+  }
+  .span-5-of-8 {
+    width: 100%;
+  }
+  .span-4-of-8 {
+    width: 100%;
+  }
+  .span-3-of-8 {
+    width: 100%;
+  }
+  .span-2-of-8 {
+    width: 100%;
+  }
+  .span-1-of-8 {
+    width: 100%;
+  }
+}
+
+/*  GRID OF NINE   ============================================================================= */
+.span-9-of-9 {
+  width: 100%;
+}
+
+.span-8-of-9 {
+  width: 88.71%;
+}
+
+.span-7-of-9 {
+  width: 77.42%;
+}
+
+.span-6-of-9 {
+  width: 66.13%;
+}
+
+.span-5-of-9 {
+  width: 54.84%;
+}
+
+.span-4-of-9 {
+  width: 43.55%;
+}
+
+.span-3-of-9 {
+  width: 32.26%;
+}
+
+.span-2-of-9 {
+  width: 20.97%;
+}
+
+.span-1-of-9 {
+  width: 9.68%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .span-9-of-9 {
+    width: 100%;
+  }
+  .span-8-of-9 {
+    width: 100%;
+  }
+  .span-7-of-9 {
+    width: 100%;
+  }
+  .span-6-of-9 {
+    width: 100%;
+  }
+  .span-5-of-9 {
+    width: 100%;
+  }
+  .span-4-of-9 {
+    width: 100%;
+  }
+  .span-3-of-9 {
+    width: 100%;
+  }
+  .span-2-of-9 {
+    width: 100%;
+  }
+  .span-1-of-9 {
+    width: 100%;
+  }
+}
+
+/*  GRID OF TEN   ============================================================================= */
+.span-10-of-10 {
+  width: 100%;
+}
+
+.span-9-of-10 {
+  width: 89.84%;
+}
+
+.span-8-of-10 {
+  width: 79.68%;
+}
+
+.span-7-of-10 {
+  width: 69.52%;
+}
+
+.span-6-of-10 {
+  width: 59.36%;
+}
+
+.span-5-of-10 {
+  width: 49.2%;
+}
+
+.span-4-of-10 {
+  width: 39.04%;
+}
+
+.span-3-of-10 {
+  width: 28.88%;
+}
+
+.span-2-of-10 {
+  width: 18.72%;
+}
+
+.span-1-of-10 {
+  width: 8.56%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .span-10-of-10 {
+    width: 100%;
+  }
+  .span-9-of-10 {
+    width: 100%;
+  }
+  .span-8-of-10 {
+    width: 100%;
+  }
+  .span-7-of-10 {
+    width: 100%;
+  }
+  .span-6-of-10 {
+    width: 100%;
+  }
+  .span-5-of-10 {
+    width: 100%;
+  }
+  .span-4-of-10 {
+    width: 100%;
+  }
+  .span-3-of-10 {
+    width: 100%;
+  }
+  .span-2-of-10 {
+    width: 100%;
+  }
+  .span-1-of-10 {
+    width: 100%;
+  }
+}
+
+/*  GRID OF ELEVEN   ============================================================================= */
+.span-11-of-11 {
+  width: 100%;
+}
+
+.span-10-of-11 {
+  width: 90.76%;
+}
+
+.span-9-of-11 {
+  width: 81.52%;
+}
+
+.span-8-of-11 {
+  width: 72.29%;
+}
+
+.span-7-of-11 {
+  width: 63.05%;
+}
+
+.span-6-of-11 {
+  width: 53.81%;
+}
+
+.span-5-of-11 {
+  width: 44.58%;
+}
+
+.span-4-of-11 {
+  width: 35.34%;
+}
+
+.span-3-of-11 {
+  width: 26.1%;
+}
+
+.span-2-of-11 {
+  width: 16.87%;
+}
+
+.span-1-of-11 {
+  width: 7.63%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .span-11-of-11 {
+    width: 100%;
+  }
+  .span-10-of-11 {
+    width: 100%;
+  }
+  .span-9-of-11 {
+    width: 100%;
+  }
+  .span-8-of-11 {
+    width: 100%;
+  }
+  .span-7-of-11 {
+    width: 100%;
+  }
+  .span-6-of-11 {
+    width: 100%;
+  }
+  .span-5-of-11 {
+    width: 100%;
+  }
+  .span-4-of-11 {
+    width: 100%;
+  }
+  .span-3-of-11 {
+    width: 100%;
+  }
+  .span-2-of-11 {
+    width: 100%;
+  }
+  .span-1-of-11 {
+    width: 100%;
+  }
+}
+
+/*  GRID OF TWELVE   ============================================================================= */
+.span-12-of-12 {
+  width: 100%;
+}
+
+.span-11-of-12 {
+  width: 91.53%;
+}
+
+.span-10-of-12 {
+  width: 83.06%;
+}
+
+.span-9-of-12 {
+  width: 74.6%;
+}
+
+.span-8-of-12 {
+  width: 66.13%;
+}
+
+.span-7-of-12 {
+  width: 57.66%;
+}
+
+.span-6-of-12 {
+  width: 49.2%;
+}
+
+.span-5-of-12 {
+  width: 40.73%;
+}
+
+.span-4-of-12 {
+  width: 32.26%;
+}
+
+.span-3-of-12 {
+  width: 23.8%;
+}
+
+.span-2-of-12 {
+  width: 15.33%;
+}
+
+.span-1-of-12 {
+  width: 6.86%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .span-12-of-12 {
+    width: 100%;
+  }
+  .span-11-of-12 {
+    width: 100%;
+  }
+  .span-10-of-12 {
+    width: 100%;
+  }
+  .span-9-of-12 {
+    width: 100%;
+  }
+  .span-8-of-12 {
+    width: 100%;
+  }
+  .span-7-of-12 {
+    width: 100%;
+  }
+  .span-6-of-12 {
+    width: 100%;
+  }
+  .span-5-of-12 {
+    width: 100%;
+  }
+  .span-4-of-12 {
+    width: 100%;
+  }
+  .span-3-of-12 {
+    width: 100%;
+  }
+  .span-2-of-12 {
+    width: 100%;
+  }
+  .span-1-of-12 {
+    width: 100%;
+  }
+}
+
+.section-features .long-copy {
+  margin-bottom: 30px;
+}
+
+.section-meals {
+  padding: 0;
+}
+
+.section-meals .meals-showcase {
+  width: 100%;
+  list-style: none;
+}
+
+.section-meals .meals-showcase li {
+  display: block;
+  float: left;
+  width: 25%;
+}
+
+.section-meals .meals-showcase li .meal-photo {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.section-meals .meals-showcase li .meal-photo img {
+  opacity: 0.7;
+  width: 100%;
+  height: auto;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+}
+
+.section-meals .meals-showcase li .meal-photo img:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  opacity: 1;
+}
+
+.section-steps {
+  background: #f4f4f4;
+}
+
+.section-steps .step-box {
+  margin-top: 30px;
+}
+
+.section-steps .step-box:first-child {
+  text-align: right;
+  padding-right: 3%;
+}
+
+.section-steps .step-box:last-child {
+  padding-left: 3%;
+  margin-top: 70px;
+}
+
+.section-steps .step-box .app-screen {
+  width: 40%;
+}
+
+.section-steps .step-box .work-step {
+  margin-bottom: 50px;
+}
+
+.section-steps .step-box .work-step:last-of-type {
+  margin-bottom: 80px;
+}
+
+.section-steps .step-box .work-step div {
+  color: #e67e22;
+  border: 2px solid #e67e22;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  padding: 5px;
+  float: left;
+  font-size: 150%;
+  margin-right: 25px;
+}
+
+.section-steps .step-box .work-step p {
+  font-size: 90%;
+  line-height: 145%;
+}
+
+.section-steps .step-box .btn-app img {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.section-cities .box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.section-cities .box .city-feature {
+  margin-bottom: 15px;
+}
+
+.section-cities .box .city-feature a {
+  color: #e67e22;
+  border-bottom: 1px solid #e67e22;
+  padding-bottom: 1px;
+}
+
+.section-testimonials {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url("/img/back-customers.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/img/back-customers.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+.section-testimonials blockquote {
+  padding: 2px;
+  font-style: italic;
+  line-height: 145%;
+  margin-top: 40px;
+  position: relative;
+}
+
+.section-testimonials blockquote:before {
+  content: "\201C";
+  display: block;
+  font-size: 400%;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+.section-testimonials blockquote cite {
+  font-size: 90%;
+  margin-top: 25px;
+  display: block;
+}
+
+.section-testimonials blockquote cite img {
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.section-plans {
+  background: #f4f4f4;
+}
+
+.section-plans .plan-box {
+  width: 90%;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.section-plans .plan-box div {
+  padding: 20px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.section-plans .plan-box div:first-of-type {
+  background: #fcfcfc;
+}
+
+.section-plans .plan-box div:last-of-type {
+  background: #fcfcfc;
 }
 /*# sourceMappingURL=main.css.map */
